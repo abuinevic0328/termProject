@@ -93,7 +93,6 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\termProject.csprojResolveAssemblyReference.cache" />
-    <Content Include="obj\Debug\TempPE\Service References.ServiceReference1.Reference.cs.dll" />
     <Content Include="obj\Debug\TempPE\Web References.cardProcessing.Reference.cs.dll" />
     <Content Include="obj\Debug\TempPE\Web References.ErikaGin.Reference.cs.dll" />
     <Content Include="obj\Debug\termProject.csproj.FileListAbsolute.txt" />
@@ -371,15 +370,16 @@
     <Content Include="Merchant.Master" />
     <Content Include="Client.Master" />
     <Content Include="ClientInformation.Master" />
-    <Content Include="Web References\cardProcessing\verifyCard.wsdl" />
     <Content Include="UpdateField.ashx" />
-    <Content Include="Web References\MerchantStore\MerchantStore.wsdl" />
-    <Content Include="Web References\MerchantStore\Reference.map">
+    <Content Include="Web References\ErikaGin\MerchantStore.wsdl" />
+    <Content Include="Web References\ErikaGin\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="Web References\ErikaGin\MerchantStore.wsdl" />
-    <Content Include="Web References\ErikaGin\Reference.map">
+    <None Include="Properties\PublishProfiles\termProject.pubxml" />
+    <Content Include="Web References\cardProcessing\verifyCard.wsdl" />
+    <Content Include="Web References\MerchantStore\MerchantStore.wsdl" />
+    <Content Include="Web References\MerchantStore\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
@@ -426,10 +426,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>termProject_ErikaGin_MerchantStore</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://localhost:56701/MerchantStore.asmx">
+    <WebReferenceUrl Include="http://cis-iis2.temple.edu/Fall2015/CIS3342_tue82265/TermProjectWS/MerchantStore.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\MerchantStore\</RelPath>
-      <UpdateFromURL>http://localhost:56701/MerchantStore.asmx</UpdateFromURL>
+      <UpdateFromURL>http://cis-iis2.temple.edu/Fall2015/CIS3342_tue82265/TermProjectWS/MerchantStore.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -437,10 +437,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>termProject_MerchantStore_MerchantStore</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://localhost:6682/verifyCard.asmx">
+    <WebReferenceUrl Include="http://cis-iis2.temple.edu/Fall2015/CIS3342_tue82265/TermProjectWS/verifyCard.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\cardProcessing\</RelPath>
-      <UpdateFromURL>http://localhost:6682/verifyCard.asmx</UpdateFromURL>
+      <UpdateFromURL>http://cis-iis2.temple.edu/Fall2015/CIS3342_tue82265/TermProjectWS/verifyCard.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -451,7 +451,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
-    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

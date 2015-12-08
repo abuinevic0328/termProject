@@ -51,6 +51,11 @@ namespace termProject
             addPurchase.CommandType = CommandType.StoredProcedure;
             addPurchase.CommandText = "TP_CustomerTransactions";
 
+            SqlCommand updateProdQuan = new SqlCommand();
+
+            updateProdQuan.CommandType = CommandType.StoredProcedure;
+            updateProdQuan.CommandText = "TP_subtractProducts";
+
             foreach(cartItem obj in cartItems)
             {
                 SqlParameter prodID = new SqlParameter("@prodNum", obj.ProdNum);
@@ -71,11 +76,27 @@ namespace termProject
                 loginiD.Size = 4;
                 addPurchase.Parameters.Add(loginiD);
 
+                SqlParameter quan = new SqlParameter("@prodNum", obj.ProdNum);
+                quan.Direction = ParameterDirection.Input;
+                quan.SqlDbType = SqlDbType.Int;
+                quan.Size = 4;
+                updateProdQuan.Parameters.Add(quan);
+                objDB.DoUpdateUsingCmdObj(updateProdQuan);
                 
             }
-            
-            //add purchase
-            //deduct item quantities
+            //SqlCommand removeCart = new SqlCommand();
+
+            //updateProdQuan.CommandType = CommandType.StoredProcedure;
+            //updateProdQuan.CommandText = "TP_removeCart";
+
+            //SqlParameter id = new SqlParameter("@custID", Convert.ToInt32(Session["loginId"]));
+            //id.Direction = ParameterDirection.Input;
+            //id.SqlDbType = SqlDbType.Int;
+            //id.Size = 4;
+            //objDB.DoUpdateUsingCmdObj(removeCart);
+
+            //List<cartItem> emptyCart = new List<cartItem>();
+            //Session["cart"] = emptyCart;
         }
     }
 }

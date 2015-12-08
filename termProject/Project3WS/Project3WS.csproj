@@ -70,6 +70,7 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\Project 3WS TermProj.pubxml" />
     <None Include="Properties\PublishProfiles\Project 3WS.pubxml" />
+    <None Include="Properties\PublishProfiles\Project3WS.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

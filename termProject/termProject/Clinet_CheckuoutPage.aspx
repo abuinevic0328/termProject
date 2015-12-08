@@ -14,7 +14,7 @@
       </p>
       <p>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="btnPlaceOrder" CssClass="yellowbutton" runat="server" Text="Place Order" />
+    <asp:Button ID="btnPlaceOrder" CssClass="yellowbutton" runat="server" Text="Place Order" OnClick="btnPlaceOrder_Click" />
       </p>
 
   </div>
