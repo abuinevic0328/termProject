@@ -13,8 +13,8 @@ namespace termProject
         string email = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-         
-                
+
+            string email = "laura@gmail.com";
 
             if (Session["email"] != null)
             {

@@ -31,7 +31,7 @@
   <li><a class="a1" href="Merchant_ResetAccountInfo.aspx" >My Account</a>
      <ul>
 
-            <li><a class="a2" href="Merchant_EditInfo.aspx" >Change Credit Card</a></li>
+            <li><a class="a2" href="Merchant_EditInfo.aspx" >Change Personal Information</a></li>
      </ul>
  </li>
 </ul>
