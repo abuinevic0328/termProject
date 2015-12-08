@@ -16,7 +16,7 @@ namespace termProject
     public partial class Client_StoreHome : System.Web.UI.Page
     {
         List<cartItem> cartItems;
-
+        
         MerchantStore.MerchantStore pxy = new MerchantStore.MerchantStore();
         ErikaGin.MerchantStore EGpxy = new ErikaGin.MerchantStore();
         private int depNum;
@@ -52,12 +52,32 @@ namespace termProject
                     Button addCart = new Button();
                     TextBox txtQuantity = new TextBox();
                     Ourproducts = pxy.GetProductCatalog(depSelected);
+                    if (Ourproducts.Tables[0].Rows.Count != 0)
+                    {
+                        Session["dsProd"] = Ourproducts;
+                        //List<int> foundNums = productNumber();
+                        gvProducts.DataSource = Ourproducts;
+                        gvProducts.DataBind();
+                    }
+                    else
+                    {
+                        Ourproducts = EGpxy.GetProductCatalog(depSelected);
+                        Session["dsProd"] = Ourproducts;
+                        //List<int> foundNums = productNumber();
+                        EGgridview.DataSource = Ourproducts;
+                        EGgridview.DataBind();
+                        for (int r = 0; r < EGgridview.Rows.Count; r++)
+                        {
+                            addCart = (Button)EGgridview.Rows[r].FindControl("btnAdd");
+                            addCart.Enabled = false;
+                        }
+                        //gvProducts.DataSource = Ourproducts;
+                        //gvProducts.DataBind();
+
+                    }
                     //GinErikaProducts = EGpxy.GetProductCatalog(depSelected);
                     //Ourproducts.Merge(GinErikaProducts);
-                    Session["dsProd"] = Ourproducts;
-                    //List<int> foundNums = productNumber();
-                    gvProducts.DataSource = Ourproducts;
-                    gvProducts.DataBind();
+                    
                     //for (int r = 0; r < gvProducts.Rows.Count; r++)
                     //{
                     //    if (checkProdAvailability(foundNums.ElementAt(r)) > 0)

@@ -14,31 +14,57 @@
 </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
- <h2>Want to save more next time you shop with us?</h2>
 
-    <div class="GVcenter" >
-         <div id="text_expr"> </div>
-         <button type="button" class="yellowbutton" onclick="loadDoc()" >Learn More</button>
-           <h2> <asp:Label ID="lblDepName" runat="server" Text=""></asp:Label> </h2>
-         <h2><asp:Label ID="lblAddQuantity" runat="server" Text="" style="color:red"></asp:Label></h2>
-            <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" OnRowCommand="gvProducts_RowCommand" BorderColor="#FFD57B">
+    <h2>Want to save more next time you shop with us?</h2>
+
+    <div class="GVcenter">
+        <div id="text_expr"></div>
+        <button type="button" class="yellowbutton" onclick="loadDoc()">Learn More</button>
+        <h2>
+            <asp:Label ID="lblDepName" runat="server" Text=""></asp:Label>
+        </h2>
+        <h2>
+            <asp:Label ID="lblAddQuantity" runat="server" Text="" Style="color: red"></asp:Label></h2>
+        <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" OnRowCommand="gvProducts_RowCommand" BorderColor="#FFD57B">
+            <Columns>
+                <asp:BoundField DataField="productNum" HeaderText="Product Number" />
+                <asp:BoundField DataField="description" HeaderText="Description" />
+                <asp:BoundField DataField="price" HeaderText="Price" DataFormatString="{0:c}">
+                    <ItemStyle HorizontalAlign="Center" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="Availability" DataField="quantityOnHand">
+                    <ItemStyle HorizontalAlign="Center" />
+                </asp:BoundField>
+                <asp:TemplateField HeaderText="Order Quantity">
+                    <ItemTemplate>
+                        <asp:TextBox ID="txtQuantity" runat="server" Width="50px"></asp:TextBox>
+                    </ItemTemplate>
+                    <ItemStyle HorizontalAlign="Center" />
+                </asp:TemplateField>
+                <asp:ImageField DataImageUrlField="imageURL">
+                </asp:ImageField>
+                <asp:TemplateField HeaderText="Add">
+                    <ItemTemplate>
+                        <asp:Button ID="btnAdd" runat="server" CausesValidation="false" CommandName="btnAdd" Text="Add to Cart" CommandArgument="<%# Container.DataItemIndex %>" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+        <p>
+            <asp:GridView ID="EGgridview" runat="server" AutoGenerateColumns="False" BorderColor="#FFD578" OnRowCommand="gvProducts_RowCommand">
                 <Columns>
-                    <asp:BoundField DataField="productNum" HeaderText="Product Number" />
-                    <asp:BoundField DataField="description" HeaderText="Description" />
-                    <asp:BoundField DataField="price" HeaderText="Price" DataFormatString="{0:c}" >
-                    <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
-                    <asp:BoundField HeaderText="Availability">
-                    <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
+                    <asp:BoundField DataField="ProductNumber" HeaderText="Product Number" />
+                    <asp:BoundField DataField="ProductDesc" HeaderText="Description" />
+                    <asp:BoundField DataField="ProductPrice" HeaderText="Price" />
+                    <asp:BoundField DataField="ProductQOH" HeaderText="Availability" />
                     <asp:TemplateField HeaderText="Order Quantity">
                         <ItemTemplate>
-                            <asp:TextBox ID ="txtQuantity" runat="server" Width="50px"></asp:TextBox>
+                            <asp:TextBox ID="txtQuantity" runat="server" Width="50px"></asp:TextBox>
                         </ItemTemplate>
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:TemplateField>
-                    <asp:ImageField DataImageUrlField="imageURL">
+                    <asp:ImageField DataImageUrlField="ProductImageURL">
+                        <ControlStyle Height="115px" Width="75px" />
                     </asp:ImageField>
                     <asp:TemplateField HeaderText="Add">
                         <ItemTemplate>
@@ -47,6 +73,6 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <p>&nbsp;</p>
-        </div>
+        </p>
+    </div>
 </asp:Content>
