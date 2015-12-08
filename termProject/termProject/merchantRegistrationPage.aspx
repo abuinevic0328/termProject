@@ -18,7 +18,7 @@
             <div class ="center">
         <h2 class="Title">Thank you for wanting to sell with us!</h2>
         <h3 class="Title">Please fill out the following information in order to register:</h3>
-<%--                <p class="Title">&nbsp;</p>--%>
+
    
         <table align="center" style="height: 175px; width: 660px">
             <tr>
