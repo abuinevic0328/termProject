@@ -44,7 +44,7 @@ namespace termProject
 
         protected void btnAddCard_Click(object sender, EventArgs e)
         {
-            Response.Redirect("cardManager.aspx");
+            Response.Redirect("Client_CardManager.aspx");
 
         }
     }
