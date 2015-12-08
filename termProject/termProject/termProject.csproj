@@ -372,14 +372,14 @@
     <Content Include="Client.Master" />
     <Content Include="ClientInformation.Master" />
     <Content Include="Web References\cardProcessing\verifyCard.wsdl" />
-    <Content Include="Web References\ErikaGin\MerchantStore.wsdl" />
-    <Content Include="Web References\ErikaGin\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
     <Content Include="UpdateField.ashx" />
     <Content Include="Web References\MerchantStore\MerchantStore.wsdl" />
     <Content Include="Web References\MerchantStore\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\ErikaGin\MerchantStore.wsdl" />
+    <Content Include="Web References\ErikaGin\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>

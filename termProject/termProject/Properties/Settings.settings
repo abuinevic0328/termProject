@@ -5,11 +5,11 @@
     <Setting Name="termProject_cardProcessing_verifyCard" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:6682/verifyCard.asmx</Value>
     </Setting>
-    <Setting Name="termProject_ErikaGin_MerchantStore" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://cis-iis2.temple.edu/Fall2015/CIS3342_tuc54867/TermProjectWS/MerchantStore.asmx</Value>
-    </Setting>
     <Setting Name="termProject_MerchantStore_MerchantStore" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:56701/MerchantStore.asmx</Value>
+    </Setting>
+    <Setting Name="termProject_ErikaGin_MerchantStore" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cis-iis2.temple.edu/Fall2015/CIS3342_tuc54867/TermProjectWS/MerchantStore.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>
