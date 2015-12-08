@@ -41,7 +41,7 @@ namespace termProject
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtMember1Name.Text) || String.IsNullOrEmpty(txtMember2Name.Text) || String.IsNullOrEmpty(txtPhone.Text) || String.IsNullOrEmpty(txtDescription.Text))
+            if (String.IsNullOrEmpty(txtMember1Name.Text) || String.IsNullOrEmpty(txtMember2Name.Text) || String.IsNullOrEmpty(txtPhone.Text))
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Script", "<script> alert('All fields are required.Thank you!'); </script>");
         }
     }

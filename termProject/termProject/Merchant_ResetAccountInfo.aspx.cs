@@ -30,6 +30,12 @@ namespace termProject
 
         }
 
+        protected void btnEdit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Merchant_EditInfo.aspx");
+
+        }
+
     }
 }
     

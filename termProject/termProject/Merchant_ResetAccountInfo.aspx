@@ -44,9 +44,9 @@
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnEdit" class="yellowbutton" runat="server" Text="Edit" Width="95px" />
+            <asp:Button ID="btnEdit"  class="yellowbutton" runat="server" Text="Edit" OnClick="btnEdit_Click"></asp:Button>
             <br />
         </div>
     </div>
-     </div>
+     
 </asp:Content>
