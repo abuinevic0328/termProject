@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Client.master.cs" Inherits="termProject.Client" %>
+
+<%@ Register Src="~/SignOut.ascx" TagPrefix="uc1" TagName="SignOut" %>
+<%@ Register Src="~/SideBar.ascx" TagPrefix="uc1" TagName="SideBar" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+        <link rel="stylesheet" type="text/css" href="StyleSheetControls.css"/>
+       <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <uc1:SideBar runat="server" ID="SideBar" />
+        <uc1:SignOut runat="server" ID="SignOut" />
+        <div>
+    <img alt="amazon" class="auto-style7" src="Images/abc.png" />
+        </div>
+        <div>
+           
+   
+  <div class="ul1">
+<ul>  
+<li><a class="a1" href="Client_StoreHome.aspx">Home</a></li>
+  <li ><a class="a1" href="Client_Cart.aspx">My Cart</a>
+     <ul>
+          <li><a class="a2" href="Client_PurchasePage.aspx" >Purchase History</a></li>
+     </ul>
+      </li>
+  <li ><a class="a1" href="Client_CardManager.aspx">My Card</a>
+     <ul>
+              <li><a class="a2" href="Client_CardManager.aspx" >Add my Credit Card</a></li>
+
+            <li><a class="a2" href="Client_AmazonCard.aspx" >My ABC card</a></li>
+     </ul>
+      </li>
+  <li><a class="a1" href="Client_Reset_AccountInfo.aspx" >My Account</a>
+     <ul>
+            <li><a class="a2" href="Client_Reset_AccountInfo.aspx" >Change Email or Password</a></li>
+            <li><a class="a2" href="ClientInfo_CreditCard.aspx" >Change Credit Card</a></li>
+     </ul>
+ </li>
+</ul>
+      </div>
+                <div class="top-left">
+                <asp:Label ID="lblDepartments" runat="server" Text="Departments       " style="font-size: large; text-align: left;"></asp:Label>
+                <asp:DropDownList ID="ddlDepartments" runat="server" Height="40px" Width="206px" style="font-size: medium; text-align: left;" AutoPostBack="True" OnSelectedIndexChanged="ddlDepartments_SelectedIndexChanged"  ></asp:DropDownList>           
+                </div>
+        </div>
+  
+        <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <p>
+                <br />
+            </p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cust" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddCustomerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="addNewCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="card" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addNewCardResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="makeTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="trans" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="makeTransactionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="findCreditCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cardNum" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findCreditCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findCreditCardResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="test">
+        <s:complexType />
+      </s:element>
+      <s:element name="testResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="showCards">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="loginID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="showCardsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="showCardsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="removeCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cardNum" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="removeCardResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="cardExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cardNum" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cardExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cardExistsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCardInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="update" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCardInfoResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCustomer" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="addNewCardSoapIn">
+    <wsdl:part name="parameters" element="tns:addNewCard" />
+  </wsdl:message>
+  <wsdl:message name="addNewCardSoapOut">
+    <wsdl:part name="parameters" element="tns:addNewCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="makeTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:makeTransaction" />
+  </wsdl:message>
+  <wsdl:message name="makeTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:makeTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="findCreditCardSoapIn">
+    <wsdl:part name="parameters" element="tns:findCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="findCreditCardSoapOut">
+    <wsdl:part name="parameters" element="tns:findCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="testSoapIn">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="testSoapOut">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:message name="showCardsSoapIn">
+    <wsdl:part name="parameters" element="tns:showCards" />
+  </wsdl:message>
+  <wsdl:message name="showCardsSoapOut">
+    <wsdl:part name="parameters" element="tns:showCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeCardSoapIn">
+    <wsdl:part name="parameters" element="tns:removeCard" />
+  </wsdl:message>
+  <wsdl:message name="removeCardSoapOut">
+    <wsdl:part name="parameters" element="tns:removeCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="cardExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:cardExists" />
+  </wsdl:message>
+  <wsdl:message name="cardExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:cardExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateCardInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:updateCardInfo" />
+  </wsdl:message>
+  <wsdl:message name="updateCardInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:updateCardInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="verifyCardSoap">
+    <wsdl:operation name="AddCustomer">
+      <wsdl:input message="tns:AddCustomerSoapIn" />
+      <wsdl:output message="tns:AddCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewCard">
+      <wsdl:input message="tns:addNewCardSoapIn" />
+      <wsdl:output message="tns:addNewCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="makeTransaction">
+      <wsdl:input message="tns:makeTransactionSoapIn" />
+      <wsdl:output message="tns:makeTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findCreditCard">
+      <wsdl:input message="tns:findCreditCardSoapIn" />
+      <wsdl:output message="tns:findCreditCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testSoapIn" />
+      <wsdl:output message="tns:testSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="showCards">
+      <wsdl:input message="tns:showCardsSoapIn" />
+      <wsdl:output message="tns:showCardsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="removeCard">
+      <wsdl:input message="tns:removeCardSoapIn" />
+      <wsdl:output message="tns:removeCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cardExists">
+      <wsdl:input message="tns:cardExistsSoapIn" />
+      <wsdl:output message="tns:cardExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCardInfo">
+      <wsdl:input message="tns:updateCardInfoSoapIn" />
+      <wsdl:output message="tns:updateCardInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="verifyCardSoap" type="tns:verifyCardSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddCustomer">
+      <soap:operation soapAction="http://tempuri.org/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewCard">
+      <soap:operation soapAction="http://tempuri.org/addNewCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeTransaction">
+      <soap:operation soapAction="http://tempuri.org/makeTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCreditCard">
+      <soap:operation soapAction="http://tempuri.org/findCreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showCards">
+      <soap:operation soapAction="http://tempuri.org/showCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCard">
+      <soap:operation soapAction="http://tempuri.org/removeCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cardExists">
+      <soap:operation soapAction="http://tempuri.org/cardExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardInfo">
+      <soap:operation soapAction="http://tempuri.org/updateCardInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="verifyCardSoap12" type="tns:verifyCardSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddCustomer">
+      <soap12:operation soapAction="http://tempuri.org/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewCard">
+      <soap12:operation soapAction="http://tempuri.org/addNewCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeTransaction">
+      <soap12:operation soapAction="http://tempuri.org/makeTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCreditCard">
+      <soap12:operation soapAction="http://tempuri.org/findCreditCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap12:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showCards">
+      <soap12:operation soapAction="http://tempuri.org/showCards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCard">
+      <soap12:operation soapAction="http://tempuri.org/removeCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cardExists">
+      <soap12:operation soapAction="http://tempuri.org/cardExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCardInfo">
+      <soap12:operation soapAction="http://tempuri.org/updateCardInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="verifyCard">
+    <wsdl:port name="verifyCardSoap" binding="tns:verifyCardSoap">
+      <soap:address location="http://localhost:6682/verifyCard.asmx" />
+    </wsdl:port>
+    <wsdl:port name="verifyCardSoap12" binding="tns:verifyCardSoap12">
+      <soap12:address location="http://localhost:6682/verifyCard.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

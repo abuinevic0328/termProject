@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA0B207F-CD90-4C6D-B7F9-750ED4B47BE4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>termProject</RootNamespace>
+    <AssemblyName>termProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxExample.aspx" />
+    <Content Include="AJAXSample1.js" />
+    <Content Include="AjaxSample2.js" />
+    <Content Include="bin\Project3WS.dll" />
+    <Content Include="bin\termProjectLibrary.dll" />
+    <Content Include="bin\termProjectWS.dll" />
+    <Content Include="bin\Utilities.dll" />
+    <Content Include="Client_AmazonCard.aspx" />
+    <Content Include="Client_CardManager.aspx" />
+    <Content Include="Client_PurchasePage.aspx" />
+    <Content Include="Client_ResetForgottenPassword.aspx" />
+    <Content Include="Clinet_CheckuoutPage.aspx" />
+    <Content Include="expression.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\afteralice.jpg" />
+    <Content Include="Images\aziz.jpg" />
+    <Content Include="Images\Book1.jpg" />
+    <Content Include="Images\book2.jpg" />
+    <Content Include="Images\book3.jpg" />
+    <Content Include="Images\CART logo-1683987115.png" />
+    <Content Include="Images\don.jpg" />
+    <Content Include="Images\findersKeepers.jpg" />
+    <Content Include="Images\justiceRedeemed.jpg" />
+    <Content Include="Images\oneyearafter.jpg" />
+    <Content Include="Images\redRibbon.png" />
+    <Content Include="Images\shivaree.jpg" />
+    <Content Include="Images\theheartgoeslast.jpg" />
+    <Content Include="Images\usernameEvie.jpg" />
+    <Content Include="Merchant_EditInfo.aspx" />
+    <Content Include="Merchant_Home.aspx" />
+    <Content Include="Merchant_ResetAccountInfo.aspx" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\termProject.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\TempPE\Service References.ServiceReference1.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Web References.cardProcessing.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Web References.ErikaGin.Reference.cs.dll" />
+    <Content Include="obj\Debug\termProject.csproj.FileListAbsolute.txt" />
+    <Content Include="SideBar.ascx" />
+    <Content Include="SignOut.ascx" />
+    <Content Include="ClientInfo_CreditCard.aspx" />
+    <Content Include="ClientInfo_EditCard.aspx" />
+    <Content Include="Client_Cart.aspx" />
+    <Content Include="Client_Reset_Email.aspx" />
+    <Content Include="Client_Reset_Name.aspx" />
+    <Content Include="Client_Reset_Password.aspx" />
+    <Content Include="Client_Reset_PhoneNumber.aspx" />
+    <Content Include="Client_StoreHome.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="ForgetPassword.aspx" />
+    <Content Include="Images\abc.png" />
+    <Content Include="Images\alexander-hamilton.jpg" />
+    <Content Include="Images\kim.jpg" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="merchantRegistrationPage.aspx" />
+    <Content Include="RegistrationCheck.aspx" />
+    <Content Include="registrationPage.aspx" />
+    <Content Include="Client_Reset_AccountInfo.aspx" />
+    <Content Include="StyleSheetControls.css" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\cardProcessing\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\cardProcessing\verifyCard.disco" />
+    <Content Include="Web References\ErikaGin\MerchantStore.disco" />
+    <Content Include="Web References\MerchantStore\MerchantStore.disco" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjaxExample.aspx.cs">
+      <DependentUpon>AjaxExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxExample.aspx.designer.cs">
+      <DependentUpon>AjaxExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_AmazonCard.aspx.cs">
+      <DependentUpon>Client_AmazonCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_AmazonCard.aspx.designer.cs">
+      <DependentUpon>Client_AmazonCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_CardManager.aspx.cs">
+      <DependentUpon>Client_CardManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_CardManager.aspx.designer.cs">
+      <DependentUpon>Client_CardManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_PurchasePage.aspx.cs">
+      <DependentUpon>Client_PurchasePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_PurchasePage.aspx.designer.cs">
+      <DependentUpon>Client_PurchasePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_ResetForgottenPassword.aspx.cs">
+      <DependentUpon>Client_ResetForgottenPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_ResetForgottenPassword.aspx.designer.cs">
+      <DependentUpon>Client_ResetForgottenPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clinet_CheckuoutPage.aspx.cs">
+      <DependentUpon>Clinet_CheckuoutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clinet_CheckuoutPage.aspx.designer.cs">
+      <DependentUpon>Clinet_CheckuoutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Merchant_EditInfo.aspx.cs">
+      <DependentUpon>Merchant_EditInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Merchant_EditInfo.aspx.designer.cs">
+      <DependentUpon>Merchant_EditInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Merchant_Home.aspx.cs">
+      <DependentUpon>Merchant_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Merchant_Home.aspx.designer.cs">
+      <DependentUpon>Merchant_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Merchant_ResetAccountInfo.aspx.cs">
+      <DependentUpon>Merchant_ResetAccountInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Merchant_ResetAccountInfo.aspx.designer.cs">
+      <DependentUpon>Merchant_ResetAccountInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="SideBar.ascx.cs">
+      <DependentUpon>SideBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SideBar.ascx.designer.cs">
+      <DependentUpon>SideBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOut.ascx.cs">
+      <DependentUpon>SignOut.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.ascx.designer.cs">
+      <DependentUpon>SignOut.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateField.ashx.cs">
+      <DependentUpon>UpdateField.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Client.Master.cs">
+      <DependentUpon>Client.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client.Master.designer.cs">
+      <DependentUpon>Client.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ClientInformation.Master.cs">
+      <DependentUpon>ClientInformation.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientInformation.Master.designer.cs">
+      <DependentUpon>ClientInformation.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ClientInfo_CreditCard.aspx.cs">
+      <DependentUpon>ClientInfo_CreditCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientInfo_CreditCard.aspx.designer.cs">
+      <DependentUpon>ClientInfo_CreditCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientInfo_EditCard.aspx.cs">
+      <DependentUpon>ClientInfo_EditCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientInfo_EditCard.aspx.designer.cs">
+      <DependentUpon>ClientInfo_EditCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Cart.aspx.cs">
+      <DependentUpon>Client_Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Cart.aspx.designer.cs">
+      <DependentUpon>Client_Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Reset_Email.aspx.cs">
+      <DependentUpon>Client_Reset_Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Reset_Email.aspx.designer.cs">
+      <DependentUpon>Client_Reset_Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Reset_Name.aspx.cs">
+      <DependentUpon>Client_Reset_Name.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Reset_Name.aspx.designer.cs">
+      <DependentUpon>Client_Reset_Name.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Reset_Password.aspx.cs">
+      <DependentUpon>Client_Reset_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Reset_Password.aspx.designer.cs">
+      <DependentUpon>Client_Reset_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Reset_PhoneNumber.aspx.cs">
+      <DependentUpon>Client_Reset_PhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Reset_PhoneNumber.aspx.designer.cs">
+      <DependentUpon>Client_Reset_PhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_StoreHome.aspx.cs">
+      <DependentUpon>Client_StoreHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_StoreHome.aspx.designer.cs">
+      <DependentUpon>Client_StoreHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Merchant.Master.cs">
+      <DependentUpon>Merchant.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Merchant.Master.designer.cs">
+      <DependentUpon>Merchant.Master</DependentUpon>
+    </Compile>
+    <Compile Include="merchantRegistrationPage.aspx.cs">
+      <DependentUpon>merchantRegistrationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="merchantRegistrationPage.aspx.designer.cs">
+      <DependentUpon>merchantRegistrationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationCheck.aspx.cs">
+      <DependentUpon>RegistrationCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationCheck.aspx.designer.cs">
+      <DependentUpon>RegistrationCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="registrationPage.aspx.cs">
+      <DependentUpon>registrationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrationPage.aspx.designer.cs">
+      <DependentUpon>registrationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Reset_AccountInfo.aspx.cs">
+      <DependentUpon>Client_Reset_AccountInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Reset_AccountInfo.aspx.designer.cs">
+      <DependentUpon>Client_Reset_AccountInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\cardProcessing\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ErikaGin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MerchantStore\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Merchant.Master" />
+    <Content Include="Client.Master" />
+    <Content Include="ClientInformation.Master" />
+    <Content Include="Web References\cardProcessing\verifyCard.wsdl" />
+    <Content Include="Web References\ErikaGin\MerchantStore.wsdl" />
+    <Content Include="Web References\ErikaGin\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="UpdateField.ashx" />
+    <Content Include="Web References\MerchantStore\MerchantStore.wsdl" />
+    <Content Include="Web References\MerchantStore\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project3WS\Project3WS.csproj">
+      <Project>{fc0a7f5a-22b6-408f-ad3b-a78711ebf1e9}</Project>
+      <Name>Project3WS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\termProjectLibrary\termProjectLibrary.csproj">
+      <Project>{8b8cdaae-625e-4d0b-ada2-e8e220dc6a4b}</Project>
+      <Name>termProjectLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\termProjectWS\termProjectWS.csproj">
+      <Project>{bd5f5bdb-2962-456b-b8d5-b0793dd5d009}</Project>
+      <Name>termProjectWS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{710e6cb9-cba0-47b7-8953-1d0de0a19857}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://cis-iis2.temple.edu/Fall2015/CIS3342_tuc54867/TermProjectWS/MerchantStore.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ErikaGin\</RelPath>
+      <UpdateFromURL>http://cis-iis2.temple.edu/Fall2015/CIS3342_tuc54867/TermProjectWS/MerchantStore.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>termProject_ErikaGin_MerchantStore</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:56701/MerchantStore.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MerchantStore\</RelPath>
+      <UpdateFromURL>http://localhost:56701/MerchantStore.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>termProject_MerchantStore_MerchantStore</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:6682/verifyCard.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\cardProcessing\</RelPath>
+      <UpdateFromURL>http://localhost:6682/verifyCard.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>termProject_cardProcessing_verifyCard</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59898</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12762/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

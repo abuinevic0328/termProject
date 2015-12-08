@@ -1,0 +1,66 @@
+﻿body {
+background-color: #f7f1f1
+
+}
+ 
+h1 { 
+color:black;
+font-family: serif;
+font-size:x-large;
+font-weight:bold; 
+}
+
+h2 {
+ color:black;
+ font-family: serif;
+ font-size:large;
+ text-align: center;
+ font-weight:bold; 
+}
+h3 {
+ color:black;
+ font-family: serif;
+ font-size:medium;
+ text-align: center;
+ font-weight:bold; 
+
+}
+.yellowbutton {
+    background-color: #FFD57B; 
+    padding: 2px 4px;
+    font: 13px sans-serif;
+    text-decoration: none;
+    border: 1px solid #000;
+    color: #000
+
+}
+.greyButton {
+    background-color: #333333; 
+    padding: 2px 4px;
+    font: 13px sans-serif;
+    text-decoration: none;
+    border: 1px solid #000;
+    color: #000
+   
+}
+ .text {
+  color: black;
+  font-family: serif;
+ font-size:medium;
+ text-align: center;
+        }
+.navbar {
+            text-align: center;
+        }
+
+ul {
+    list-style-type:initial;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+
+
+  
