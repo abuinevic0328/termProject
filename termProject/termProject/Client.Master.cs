@@ -12,13 +12,16 @@ namespace termProject
     public partial class Client : System.Web.UI.MasterPage
     {
         MerchantStore.MerchantStore pxy = new MerchantStore.MerchantStore();
-        
+        ErikaGin.MerchantStore EGpxy = new ErikaGin.MerchantStore();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 DataSet dep = new DataSet();
                 dep = pxy.GetDepartments();
+                DataSet dep2 = new DataSet();
+                dep2 = EGpxy.GetDepartments();
+                dep.Merge(dep2);
                 ddlDepartments.DataSource = dep;
                 ddlDepartments.DataTextField = "departmentName";
                 ddlDepartments.DataValueField = "departmentNumber";
